@@ -145,7 +145,7 @@ function Update(i) {
 // Search
 let searchMode = "title";
 
-function getsearchmode(id) {
+function  getsearchmode(id) {
   let searchBox = document.getElementById("search");
   if (id == "searchtitle") {
     searchMode = "title";
