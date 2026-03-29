@@ -1,0 +1,138 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruds Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="header">
+            <h1>cruds</h1>
+            <p>welcom to our cruds</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" class="title" id="title" placeholder="title">
+
+            <div class="fields">
+                <input max="9999"  onkeyup="getTotal()" type="number" placeholder= "price" id="price" >
+                <input onkeyup="getTotal()" type="number" placeholder= "taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder= "ads" id="ads">
+                <input onkeyup="getTotal()" type="text" placeholder=   "discount" id="discount">
+                <small id="total"></small>
+            </div>
+                <input type="text" id="count" placeholder="count">
+                <input type="text" id="catigories" placeholder="catigories">
+                <button  id="submit">create</button> 
+        </div>
+
+        <div class="outputs">
+            <input type="search" onkeyup="SearchContent(this.value)" placeholder="search" class="search" id="search">
+            <div class="searchbtns" id="searchbtns">
+                <button  onclick="getsearchmode(this.id)" id="searchtitle">search by title</button>
+                <button  onclick="getsearchmode(this.id)" id="searchcategory">search by category</button>
+            </div>
+            <button id="DeleteAll" ></button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                </thead>
+            
+
+            <tbody>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>samsung</td>
+                    <td>30$</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>samsung</td>
+                    <td>30$</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><button>delete</button></td>
+                    <td><button>update</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>samsung</td>
+                    <td>30$</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>samsung</td>
+                    <td>30$</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><button>update</button></td>
+                    <td><button>delete</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>samsung</td>
+                    <td>30$</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><button>delete</button></td>
+                    <td><button>update</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>samsung</td>
+                    <td>30$</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td><button>delete</button></td>
+                    <td><button>update</button></td>
+                </tr> -->
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
